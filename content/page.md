@@ -2,11 +2,11 @@
 
 ## document-title
 
-Alpine BNP 2027 · 3–5 July · Rifugio Antonio Curò
+Alpine BNP 2027 · 3–5 July · Ostello Antonio Curò
 
 ## document-description
 
-Alpine BNP 2027: a small Bayesian nonparametrics workshop at Rifugio Antonio Curò, 3–5 July. Programme, participation and practical information.
+Alpine BNP 2027: a small Bayesian nonparametrics workshop at Ostello Antonio Curò, 3–5 July. Programme, participation and practical information.
 
 ## skip-link
 
@@ -58,7 +58,7 @@ Bayesian nonparametrics in the Orobie Alps
 
 ## hero-location
 
-Rifugio Antonio Curò
+Ostello Antonio Curò
 
 ## hero-region
 
@@ -66,7 +66,7 @@ Bergamo Alps, Italy
 
 ## hero-photo-description
 
-Lake Barbellino and the mountain slopes near Rifugio Antonio Curò in the Orobie Alps
+Lake Barbellino and the surrounding mountain slopes in the Orobie Alps
 
 ## about-heading
 
@@ -106,15 +106,15 @@ Venue & hiking
 
 ## venue-introduction
 
-Rifugio Antonio Curò, in the Orobie Alps, province of Bergamo.
+Ostello Antonio Curò, in the Orobie Alps, province of Bergamo.
 
 ## venue-photo-description
 
-The entrance to Rifugio Antonio Curò on a mountain slope
+The Curò mountain refuge in its Alpine surroundings
 
 ## getting-there
 
-Participants will meet in Bergamo on Saturday morning. Organised shuttles will take the group to the trailhead, followed by a group hike to the rifugio. Departure time, meeting point and transport arrangements will be announced later.
+Participants will meet in Bergamo on Saturday morning. Organised shuttles will take the group to the trailhead, followed by a group hike to Ostello Antonio Curò. Departure time, meeting point and transport arrangements will be announced later.
 
 ## hiking-emphasis
 
@@ -126,11 +126,11 @@ Participants must be physically able to make the approach on foot. Distance, ele
 
 ## accommodation
 
-Participants will spend two nights in shared rooms at the rifugio or associated hostel, with shared bathrooms and showers. Final room arrangements will be communicated closer to the event.
+Participants will spend two nights in shared rooms at Ostello Antonio Curò, with shared bathrooms and showers. Final room arrangements will be communicated closer to the event.
 
 ## monday-routes
 
-Monday offers a standard descent along the approach route or an optional longer mountain itinerary via a second rifugio. The longer route is intended for participants comfortable with a longer Alpine hike; the final route and difficulty remain to be confirmed.
+Monday offers a standard descent along the approach route or an optional longer mountain itinerary via another rifugio. The longer route is intended for participants comfortable with a longer Alpine hike; the final route and difficulty remain to be confirmed.
 
 ## weather-note
 

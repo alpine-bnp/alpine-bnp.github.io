@@ -52,7 +52,7 @@
         },
         {
           "period": "Morning / early afternoon",
-          "title": "Group hike to Rifugio Curò",
+          "title": "Group hike to Ostello Antonio Curò",
           "description": "Arrival around lunchtime; final arrangements to be confirmed."
         },
         {
@@ -91,10 +91,10 @@
         {
           "period": "Evening",
           "title": "Dinner",
-          "description": "First overnight stay at the rifugio or associated hostel."
+          "description": "First overnight stay at Ostello Antonio Curò."
         }
       ],
-      "overview": "Transfer from Bergamo to the trailhead, followed by a group hike to Rifugio Curò. Arrival around lunchtime, check-in and showers, followed by the first scientific afternoon, poster session, dinner and overnight stay."
+      "overview": "Transfer from Bergamo to the trailhead, followed by a group hike to Ostello Antonio Curò. Arrival around lunchtime, check-in and showers, followed by the first scientific afternoon, poster session, dinner and overnight stay."
     },
     {
       "id": "sunday",
@@ -146,10 +146,10 @@
         {
           "period": "Evening",
           "title": "Dinner",
-          "description": "Second overnight stay at the rifugio or associated hostel."
+          "description": "Second overnight stay at Ostello Antonio Curò."
         }
       ],
-      "overview": "A short optional hike in the morning, followed by an afternoon of scientific talks and discussion. Poster session, dinner and a second night at the rifugio."
+      "overview": "A short optional hike in the morning, followed by an afternoon of scientific talks and discussion. Poster session, dinner and a second night at Ostello Antonio Curò."
     },
     {
       "id": "monday",
@@ -169,7 +169,7 @@
         {
           "period": "Alternative departure",
           "title": "Long mountain route",
-          "description": "An optional longer high-mountain itinerary via a second rifugio, followed by descent to the valley. Suitable only for participants comfortable with a longer Alpine hike; routing and difficulty to be confirmed."
+          "description": "An optional longer high-mountain itinerary via another rifugio, followed by descent to the valley. Suitable only for participants comfortable with a longer Alpine hike; routing and difficulty to be confirmed."
         },
         {
           "period": "After descent",
