@@ -1,6 +1,6 @@
 # Alpine BNP 2027
 
-The workshop's **single-page website**, with its original layout, colours, photography and mobile navigation. This repository is private. The existing [private one-page preview](https://alpine-bnp-2027-one-page.berahamario.chatgpt.site) remains available separately; GitHub Pages is not enabled.
+The workshop's **single-page website**, with its original layout, colours, photography and mobile navigation. The public site is [alpine-bnp.github.io](https://alpine-bnp.github.io/). The earlier [private one-page preview](https://alpine-bnp-2027-one-page.berahamario.chatgpt.site) remains available separately.
 
 ## Editing the website
 
@@ -10,7 +10,7 @@ The workshop's **single-page website**, with its original layout, colours, photo
 - Edit [`content/workshop.json`](content/workshop.json) for the programme, organisers, registration fee, hiking specifications, links and confirmed supporters.
 - See [`content/README.md`](content/README.md) for the editing instructions.
 
-On GitHub, open a content file and select the pencil icon. Change the text, choose **Commit changes**, then **Create a new branch** and **Propose changes**. A collaborator can review the pull request before it is merged. Each commit and pull request runs an automatic build and checks the page links and assets. The built website is saved as a private Actions artifact named `alpine-bnp-website` for seven days. Publishing remains a separate step: content edits do not automatically change the existing Sites preview or create a public website.
+On GitHub, open a content file and select the pencil icon. Change the text, choose **Commit changes**, then **Create a new branch** and **Propose changes**. A collaborator can review the pull request before it is merged. Each commit and pull request runs an automatic check of the page links and assets. Once merged into `main`, GitHub Actions builds and publishes the one-page site. Content edits do not change the earlier Sites preview.
 
 ## Collaboration
 
@@ -27,13 +27,13 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:4173/`. Rebuild and refresh after edits. Generated files are in `dist/`; edit the source files instead. The builder copies `assets/` into `dist/assets/` on every build.
 
-For a future repository-based GitHub Pages address such as `owner.github.io/alpine-bnp-2027/`, build with its path:
+For another repository-based GitHub Pages address such as `owner.github.io/alpine-bnp-2027/`, build with its path:
 
 ```sh
 BASE_PATH=/alpine-bnp-2027 node build.mjs
 ```
 
-An organisation address such as `alpine-bnp.github.io` uses the default empty base path. The builder updates local asset addresses while preserving external links and page anchors. A private GitHub repository does not by itself make a GitHub Pages website private; no public Pages deployment is configured here.
+The organisation address `alpine-bnp.github.io` uses the default empty base path. The builder updates local asset addresses while preserving external links and page anchors.
 
 ## Design and credits
 
