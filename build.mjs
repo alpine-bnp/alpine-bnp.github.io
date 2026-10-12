@@ -40,7 +40,7 @@ const raw = key => {
 };
 const text = key => escape(raw(key));
 // Check every expected block, including text used only once details are confirmed.
-const requiredCopy = ["document-title", "document-description", "skip-link", "brand-name", "brand-year", "menu-label", "menu-close-label", "programme-heading", "venue-navigation", "registration-heading", "contact-navigation", "hero-title", "hero-subtitle", "hero-dates", "hero-location", "hero-region", "hero-photo-description", "about-heading", "about-introduction", "about-paragraph-one", "about-paragraph-two", "programme-note", "speaker-pending", "abstracts-link", "abstracts-pending", "venue-heading", "venue-introduction", "venue-photo-description", "getting-there", "hiking-emphasis", "hiking-paragraph", "accommodation", "monday-routes", "weather-note", "registration-introduction", "registration-details", "registration-link", "registration-pending", "committee-heading", "committee-pending", "contact-introduction", "contact-pending", "footer-identity", "back-to-top", "supporter-introduction", "photography-introduction", "photography-by", "photography-note", "label-registration-fee", "label-registration-inclusions", "label-registration-deadline", "label-application-deadline", "label-payment", "label-cancellation", "label-hiking-distance", "label-hiking-elevation", "label-hiking-time", "label-hiking-difficulty", "label-hiking-footwear", "label-hiking-equipment"];
+const requiredCopy = ["document-title", "document-description", "skip-link", "brand-name", "brand-year", "menu-label", "menu-close-label", "programme-heading", "venue-navigation", "registration-heading", "contact-navigation", "hero-title", "hero-subtitle", "hero-dates", "hero-location", "hero-region", "hero-photo-description", "about-heading", "about-introduction", "about-paragraph-one", "about-paragraph-two", "programme-note", "abstracts-link", "abstracts-pending", "venue-heading", "venue-introduction", "venue-photo-description", "getting-there", "hiking-emphasis", "hiking-paragraph", "accommodation", "monday-routes", "weather-note", "registration-fee-pending", "registration-pending", "committee-heading", "committee-pending", "contact-introduction", "contact-pending", "footer-identity", "back-to-top", "supporter-introduction", "photography-introduction", "photography-by", "photography-note", "label-registration-fee", "label-hiking-distance", "label-hiking-elevation", "label-hiking-time", "label-hiking-difficulty", "label-hiking-footwear", "label-hiking-equipment"];
 for (const key of requiredCopy) raw(key);
 for (const key of copy.keys()) {
   if (!requiredCopy.includes(key)) throw new Error(`Unknown text block "${key}" in content/page.md`);
@@ -58,18 +58,29 @@ const link = value => {
   try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? escape(url.href) : null; }
   catch { return null; }
 };
-const registrationFields = [[raw('label-registration-fee'), 'fee'], [raw('label-registration-inclusions'), 'inclusions'], [raw('label-registration-deadline'), 'registrationDeadline'], [raw('label-application-deadline'), 'applicationDeadline'], [raw('label-payment'), 'paymentInstructions'], [raw('label-cancellation'), 'cancellationPolicy']];
+// Editorial paragraphs may contain Markdown links; labels and attributes remain plain text.
+const linkedText = key => {
+  const value = raw(key);
+  let rendered = '';
+  let cursor = 0;
+  for (const match of value.matchAll(/\[([^\]\n]+)\]\(([^)\n]+)\)/g)) {
+    const destination = link(match[2]);
+    if (!destination) throw new Error(`Invalid web link in text block "${key}"`);
+    rendered += escape(value.slice(cursor, match.index));
+    rendered += `<a href="${destination}">${escape(match[1])}</a>`;
+    cursor = match.index + match[0].length;
+  }
+  return rendered + escape(value.slice(cursor));
+};
 const hikingFields = [[raw('label-hiking-distance'), 'distance'], [raw('label-hiking-elevation'), 'elevationGain'], [raw('label-hiking-time'), 'hikingTime'], [raw('label-hiking-difficulty'), 'difficulty'], [raw('label-hiking-footwear'), 'footwear'], [raw('label-hiking-equipment'), 'equipment']];
 const confirmedFields = (fields, values) => fields.filter(([, key]) => values[key]).map(([label, key]) => `<div><dt>${escape(label)}</dt><dd>${escape(values[key])}</dd></div>`).join('');
 const hikingDetails = confirmedFields(hikingFields, data.hiking);
-const registrationDetails = confirmedFields(registrationFields, data.registration);
 const organisers = data.organisers.filter(o => o.name);
 const supporters = data.supporters.filter(s => s.confirmed);
 const email = data.contactEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.contactEmail) ? data.contactEmail : null;
 
 function eventRow(event) {
-  const talks = (event.talks || []).filter(t => t.speaker || t.title).map(t => `<p class="talk">${escape(t.speaker || raw('speaker-pending'))}${t.title ? ` · ${escape(t.title)}` : ''}</p>`).join('');
-  return `<li><span class="period">${escape(event.period)}</span><div><span class="event-title">${escape(event.title)}</span>${event.description ? `<p class="event-description">${escape(event.description)}</p>` : ''}${talks}</div></li>`;
+  return `<li><span class="period">${escape(event.period)}</span><div><span class="event-title">${escape(event.title)}</span></div></li>`;
 }
 
 const html = `<!doctype html>
@@ -115,7 +126,7 @@ const html = `<!doctype html>
         <h2 id="about-title">${text('about-heading')}</h2>
         <div class="section-content prose">
           <p class="lead">${text('about-introduction')}</p>
-          <p>${text('about-paragraph-one')}</p>
+          <p>${linkedText('about-paragraph-one')}</p>
           <p>${text('about-paragraph-two')}</p>
         </div>
       </section>
@@ -151,17 +162,15 @@ const html = `<!doctype html>
       <section class="section" id="registration" aria-labelledby="registration-title">
         <h2 id="registration-title">${text('registration-heading')}</h2>
         <div class="section-content prose">
-          <p>${text('registration-introduction')}</p>
-          <p>${text('registration-details')}</p>
-          ${registrationDetails ? `<dl class="confirmed-details">${registrationDetails}</dl>` : ''}
-          ${link(data.registration.formUrl) ? `<p><a class="button" href="${link(data.registration.formUrl)}">${text('registration-link')}</a></p>` : `<p class="registration-status">${text('registration-pending')}</p>`}
+          <p>${text('label-registration-fee')}: ${data.registration.fee ? escape(data.registration.fee) : text('registration-fee-pending')}</p>
+          <p class="registration-status">${text('registration-pending')}</p>
         </div>
       </section>
 
       <section class="section" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">${text('committee-heading')}</h2>
         <div class="section-content prose">
-          ${organisers.length ? `<ul class="organisers">${organisers.map(o => `<li>${o.photo ? `<img src="${escape(o.photo)}" width="64" height="64" loading="lazy" alt="${escape(o.name)}">` : ''}<div><strong>${link(o.webpage) ? `<a href="${link(o.webpage)}">${escape(o.name)}</a>` : escape(o.name)}</strong>${o.institution ? `<span>${escape(o.institution)}</span>` : ''}</div></li>`).join('')}</ul>` : `<p>${text('committee-pending')}</p>`}
+          ${organisers.length ? `<ul class="organisers">${organisers.map(o => `<li>${o.photo ? `<img src="${escape(o.photo)}" width="64" height="64" loading="lazy" alt="${escape(o.name)}">` : ''}<div><strong>${link(o.webpage) ? `<a href="${link(o.webpage)}">${escape(o.name)}</a>` : escape(o.name)}</strong>${o.role ? `<span>${escape(o.role)}</span>` : ''}${o.institution ? `<span>${escape(o.institution)}</span>` : ''}</div></li>`).join('')}</ul>` : `<p>${text('committee-pending')}</p>`}
           ${email ? `<p>${text('contact-introduction')} <a href="mailto:${escape(email)}">${escape(email)}</a>.</p>` : `<p>${text('contact-pending')}</p>`}
         </div>
       </section>

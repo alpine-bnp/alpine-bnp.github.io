@@ -74,11 +74,11 @@ The meeting
 
 ## about-introduction
 
-Three days of scientific exchange, hiking and time together in the mountains.
+Three days of scientific exchange focused on Bayesian nonparametrics, while enjoying the Italian Alps.
 
 ## about-paragraph-one
 
-Alpine BNP is a small scientific meeting devoted to Bayesian nonparametrics and related areas, held immediately after the Bayesian Nonparametrics conference in Bergamo.
+Alpine BNP is a small scientific meeting devoted to Bayesian nonparametrics and related areas, held immediately after the [15th International Conference on Bayesian Nonparametrics (BNP15)](https://bnp15.github.io/) in Bergamo.
 
 ## about-paragraph-two
 
@@ -87,10 +87,6 @@ The informal format combines invited and contributed talks, poster sessions, sha
 ## programme-note
 
 Provisional programme. Exact timings, speakers and talk titles will be announced closer to the meeting. Outdoor activities are weather-dependent.
-
-## speaker-pending
-
-Speaker to be announced
 
 ## abstracts-link
 
@@ -130,23 +126,15 @@ Participants will spend two nights in shared rooms at Ostello Antonio Curò, wit
 
 ## monday-routes
 
-Monday offers a standard descent along the approach route or an optional longer mountain itinerary via another rifugio. The longer route is intended for participants comfortable with a longer Alpine hike; the final route and difficulty remain to be confirmed.
+Monday offers a standard descent along the approach route or an optional longer hike to Rifugio Coca, followed by descent to the valley. The longer route is intended for participants comfortable with a longer Alpine hike; the final route and difficulty remain to be confirmed.
 
 ## weather-note
 
 Mountain weather can change rapidly. Outdoor plans may be adapted for safety.
 
-## registration-introduction
+## registration-fee-pending
 
-Participation will initially be offered to invited participants. A limited number of additional places will then be made available through an open call, subject to accommodation and meeting capacity.
-
-## registration-details
-
-The final fee, inclusions, application and registration deadlines, payment instructions and cancellation policy will be announced before registration opens.
-
-## registration-link
-
-Register / Apply
+TBD
 
 ## registration-pending
 
@@ -194,27 +182,7 @@ Images cropped and resized.
 
 ## label-registration-fee
 
-Registration fee
-
-## label-registration-inclusions
-
-Included in the fee
-
-## label-registration-deadline
-
-Registration deadline
-
-## label-application-deadline
-
-Application deadline
-
-## label-payment
-
-Payment instructions
-
-## label-cancellation
-
-Cancellation policy
+Fee
 
 ## label-hiking-distance
 

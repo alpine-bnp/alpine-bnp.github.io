@@ -7,7 +7,7 @@ The workshop's **single-page website**, with its original layout, colours, photo
 [Edit the page text](https://github.com/alpine-bnp/alpine-bnp.github.io/edit/main/content/page.md) · [Edit programme and practical details](https://github.com/alpine-bnp/alpine-bnp.github.io/edit/main/content/workshop.json)
 
 - Edit [`content/page.md`](content/page.md) for headings, paragraphs, captions and navigation labels.
-- Edit [`content/workshop.json`](content/workshop.json) for the programme, speaker details, organisers, registration information, hiking specifications, links and confirmed supporters.
+- Edit [`content/workshop.json`](content/workshop.json) for the programme, organisers, registration fee, hiking specifications, links and confirmed supporters.
 - See [`content/README.md`](content/README.md) for the editing instructions.
 
 On GitHub, open a content file and select the pencil icon. Change the text, choose **Commit changes**, then **Create a new branch** and **Propose changes**. A collaborator can review the pull request before it is merged. Each commit and pull request runs an automatic build and checks the page links and assets. The built website is saved as a private Actions artifact named `alpine-bnp-website` for seven days. Publishing remains a separate step: content edits do not automatically change the existing Sites preview or create a public website.

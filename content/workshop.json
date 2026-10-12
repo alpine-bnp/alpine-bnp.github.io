@@ -20,19 +20,43 @@
   "contactEmail": null,
   "organisers": [
     {
-      "name": null,
+      "name": "Riccardo Corradin",
+      "role": "Head of organising committee",
       "institution": null,
       "photo": null,
       "webpage": null
     },
     {
-      "name": null,
+      "name": "Mario Beraha",
+      "role": "Head of scientific committee",
       "institution": null,
       "photo": null,
       "webpage": null
     },
     {
-      "name": null,
+      "name": "Raffaele Argiento",
+      "role": null,
+      "institution": null,
+      "photo": null,
+      "webpage": null
+    },
+    {
+      "name": "Michela Cameletti",
+      "role": null,
+      "institution": null,
+      "photo": null,
+      "webpage": null
+    },
+    {
+      "name": "Laura D'Angelo",
+      "role": null,
+      "institution": null,
+      "photo": null,
+      "webpage": null
+    },
+    {
+      "name": "Lorenzo Rimella",
+      "role": null,
       "institution": null,
       "photo": null,
       "webpage": null
@@ -43,64 +67,41 @@
       "id": "saturday",
       "name": "Saturday",
       "date": "3 July 2027",
-      "theme": "Into the mountains",
       "events": [
         {
           "period": "Morning",
-          "title": "Shuttle from Bergamo to the trailhead",
-          "description": "Exact departure time and meeting point to be announced."
+          "title": "Shuttle from Bergamo to the trailhead"
         },
         {
           "period": "Morning / early afternoon",
-          "title": "Group hike to Ostello Antonio Curò",
-          "description": "Arrival around lunchtime; final arrangements to be confirmed."
+          "title": "Group hike to Ostello Antonio Curò"
         },
         {
           "period": "Lunchtime",
-          "title": "Lunch and check-in",
-          "description": "Time to settle in and shower before the scientific programme."
+          "title": "Lunch and check-in"
         },
         {
           "period": "Afternoon",
-          "title": "Scientific Session I",
-          "talks": [
-            {
-              "speaker": null,
-              "title": null
-            }
-          ]
+          "title": "Scientific sessions"
         },
         {
           "period": "Afternoon",
           "title": "Coffee break"
         },
         {
-          "period": "Afternoon",
-          "title": "Scientific Session II",
-          "talks": [
-            {
-              "speaker": null,
-              "title": null
-            }
-          ]
-        },
-        {
-          "period": "Late afternoon",
-          "title": "Poster session / aperitivo"
-        },
-        {
           "period": "Evening",
-          "title": "Dinner",
-          "description": "First overnight stay at Ostello Antonio Curò."
+          "title": "Dinner"
+        },
+        {
+          "period": "After dinner",
+          "title": "Poster session"
         }
-      ],
-      "overview": "Transfer from Bergamo to the trailhead, followed by a group hike to Ostello Antonio Curò. Arrival around lunchtime, check-in and showers, followed by the first scientific afternoon, poster session, dinner and overnight stay."
+      ]
     },
     {
       "id": "sunday",
       "name": "Sunday",
       "date": "4 July 2027",
-      "theme": "Science at altitude",
       "events": [
         {
           "period": "Morning",
@@ -108,8 +109,7 @@
         },
         {
           "period": "Morning",
-          "title": "Optional short hike",
-          "description": "Weather-dependent; itinerary to be confirmed."
+          "title": "Optional short hike"
         },
         {
           "period": "Lunchtime",
@@ -117,45 +117,26 @@
         },
         {
           "period": "Afternoon",
-          "title": "Scientific Session III",
-          "talks": [
-            {
-              "speaker": null,
-              "title": null
-            }
-          ]
+          "title": "Scientific sessions"
         },
         {
           "period": "Afternoon",
           "title": "Coffee break"
         },
         {
-          "period": "Afternoon",
-          "title": "Scientific Session IV",
-          "talks": [
-            {
-              "speaker": null,
-              "title": null
-            }
-          ]
-        },
-        {
-          "period": "Late afternoon",
-          "title": "Poster session / discussion"
-        },
-        {
           "period": "Evening",
-          "title": "Dinner",
-          "description": "Second overnight stay at Ostello Antonio Curò."
+          "title": "Dinner"
+        },
+        {
+          "period": "After dinner",
+          "title": "Poster session"
         }
-      ],
-      "overview": "A short optional hike in the morning, followed by an afternoon of scientific talks and discussion. Poster session, dinner and a second night at Ostello Antonio Curò."
+      ]
     },
     {
       "id": "monday",
       "name": "Monday",
       "date": "5 July 2027",
-      "theme": "Two ways home",
       "events": [
         {
           "period": "Morning",
@@ -163,21 +144,17 @@
         },
         {
           "period": "Departure",
-          "title": "Standard descent",
-          "description": "Return to the valley along the approach route."
+          "title": "Standard descent"
         },
         {
           "period": "Alternative departure",
-          "title": "Long mountain route",
-          "description": "An optional longer high-mountain itinerary via another rifugio, followed by descent to the valley. Suitable only for participants comfortable with a longer Alpine hike; routing and difficulty to be confirmed."
+          "title": "Long mountain route: hike to Rifugio Coca"
         },
         {
           "period": "After descent",
-          "title": "Transfer back towards Bergamo",
-          "description": "Final transport arrangements and timings to be announced."
+          "title": "Transfer back towards Bergamo"
         }
-      ],
-      "overview": "Participants may descend along the standard route or join a longer mountain itinerary via another rifugio before returning to the valley."
+      ]
     }
   ],
   "supporters": [
